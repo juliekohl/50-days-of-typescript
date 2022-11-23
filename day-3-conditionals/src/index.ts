@@ -38,19 +38,37 @@
 // }
 
 // Exercises BMI
-let height: number = 1.57;
-let weight: number = 43;
-let bmi: number = (weight / height ** 2);
-let bmiRound: number = Math.round(bmi);
+// let height: number = 1.57;
+// let weight: number = 43;
+// let bmi: number = (weight / height ** 2);
+// let bmiRound: number = Math.round(bmi);
+//
+// if (bmiRound < 18.5){
+//     console.log(`Youe BMI is ${bmiRound}, you are underweight.`);
+// } else if (bmiRound < 25) {
+//     console.log(`Youe BMI is ${bmiRound}, you have a normal weight.`);
+// } else if (bmiRound < 30) {
+//     console.log(`Youe BMI is ${bmiRound}, you are slightly overweight.`);
+// } else if (bmiRound < 35) {
+//     console.log(`Youe BMI is ${bmiRound}, you are obese.`);
+// } else {
+//     console.log(`Youe BMI is ${bmiRound}, you are clinically obese.`);
+// }
 
-if (bmiRound < 18.5){
-    console.log(`Youe BMI is ${bmiRound}, you are underweight.`);
-} else if (bmiRound < 25) {
-    console.log(`Youe BMI is ${bmiRound}, you have a normal weight.`);
-} else if (bmiRound < 30) {
-    console.log(`Youe BMI is ${bmiRound}, you are slightly overweight.`);
-} else if (bmiRound < 35) {
-    console.log(`Youe BMI is ${bmiRound}, you are obese.`);
+// Exercise Leap Year
+let year: number = 1992;
+
+if (year % 4 == 0) {
+    if (year % 100 == 0) {
+        if (year % 400 == 0) {
+            console.log("Leap year.");
+        } else {
+            console.log("Not leap year.");
+        }
+    } else {
+        console.log("Leap year.");
+    }
 } else {
-    console.log(`Youe BMI is ${bmiRound}, you are clinically obese.`);
+    console.log("Not leap year");
 }
+
