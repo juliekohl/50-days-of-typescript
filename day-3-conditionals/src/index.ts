@@ -36,3 +36,21 @@
 // } else {
 //     console.log("Sorry, you have to grow taller before you can ride.");
 // }
+
+// Exercises BMI
+let height: number = 1.57;
+let weight: number = 43;
+let bmi: number = (weight / height ** 2);
+let bmiRound: number = Math.round(bmi);
+
+if (bmiRound < 18.5){
+    console.log(`Youe BMI is ${bmiRound}, you are underweight.`);
+} else if (bmiRound < 25) {
+    console.log(`Youe BMI is ${bmiRound}, you have a normal weight.`);
+} else if (bmiRound < 30) {
+    console.log(`Youe BMI is ${bmiRound}, you are slightly overweight.`);
+} else if (bmiRound < 35) {
+    console.log(`Youe BMI is ${bmiRound}, you are obese.`);
+} else {
+    console.log(`Youe BMI is ${bmiRound}, you are clinically obese.`);
+}
