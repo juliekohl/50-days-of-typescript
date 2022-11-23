@@ -101,31 +101,61 @@
 // }
 
 // Exercise Pizza Order
-console.log("Welcome to Python Pizza Deliveries!");
-let size: string = "L";
-let add_pepperoni: string = "Y";
-let extra_cheese: string = "Y";
+// console.log("Welcome to Python Pizza Deliveries!");
+// let size: string = "L";
+// let add_pepperoni: string = "Y";
+// let extra_cheese: string = "Y";
+//
+// let bill: number = 0;
+//
+// if (size === "S") {
+//     bill = 15;
+// } else if (size === "M") {
+//     bill = 20;
+// } else {
+//     bill = 25;
+// }
+//
+// if (add_pepperoni == "Y") {
+//     if (size === "S") {
+//         bill += 2;
+//     } else {
+//         bill += 3;
+//     }
+// }
+//
+// if (extra_cheese === "Y") {
+//     bill += 1;
+// }
+//
+// console.log(`You final bill is: ${bill}`);
 
-let bill: number = 0;
+// logical Operators
+console.log("Welcome to the rollercoaster!");
+let height: number = 157;
 
-if (size === "S") {
-    bill = 15;
-} else if (size === "M") {
-    bill = 20;
-} else {
-    bill = 25;
-}
+if (height >= 120) {
+    console.log("You can ride the rollercoaster!");
+    let age: number = 50;
+    let bill: number = 0;
+    let photo: number = 0;
 
-if (add_pepperoni == "Y") {
-    if (size === "S") {
-        bill += 2;
+    if (age < 12) {
+        bill = 5;
+        photo = 3;
+        console.log(`Child tickets are ${bill + photo}`);
+    } else if (age <= 18) {
+        bill = 7;
+        photo = 3;
+        console.log(`Youth tickets are ${bill + photo}`);
+    } else if (age >= 45 && age <= 55) {
+        console.log("Everything is going to be ok. Have a free ride on us!");
     } else {
-        bill += 3;
+        bill = 12;
+        photo = 3;
+        console.log(`Adult tickets are ${bill + photo}`);
     }
-}
 
-if (extra_cheese === "Y") {
-    bill += 1;
+} else {
+    console.log("Sorry, you have to grow taller before you can ride.");
 }
-
-console.log(`You final bill is: ${bill}`);
