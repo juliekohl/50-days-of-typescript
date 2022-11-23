@@ -56,19 +56,46 @@
 // }
 
 // Exercise Leap Year
-let year: number = 1992;
+// let year: number = 1992;
+//
+// if (year % 4 == 0) {
+//     if (year % 100 == 0) {
+//         if (year % 400 == 0) {
+//             console.log("Leap year.");
+//         } else {
+//             console.log("Not leap year.");
+//         }
+//     } else {
+//         console.log("Leap year.");
+//     }
+// } else {
+//     console.log("Not leap year");
+// }
 
-if (year % 4 == 0) {
-    if (year % 100 == 0) {
-        if (year % 400 == 0) {
-            console.log("Leap year.");
-        } else {
-            console.log("Not leap year.");
-        }
+// Multiple if statements
+console.log("Welcome to the rollercoaster!");
+let height: number = 157;
+
+if (height >= 120) {
+    console.log("You can ride the rollercoaster!");
+    let age: number = 37;
+    let bill: number = 0;
+    let photo: number = 0;
+
+    if (age < 12) {
+        bill = 5;
+        photo = 3;
+        console.log(`Child tickets are ${bill + photo}`);
+    } else if (age <= 18) {
+        bill = 7;
+        photo = 3;
+        console.log(`Youth tickets are ${bill + photo}`);
     } else {
-        console.log("Leap year.");
+        bill = 12;
+        photo = 3;
+        console.log(`Adult tickets are ${bill + photo}`);
     }
-} else {
-    console.log("Not leap year");
-}
 
+} else {
+    console.log("Sorry, you have to grow taller before you can ride.");
+}
