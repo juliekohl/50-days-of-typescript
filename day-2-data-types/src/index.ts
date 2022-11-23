@@ -22,7 +22,7 @@
 // console.log(color);
 // color = 'red';
 // console.log(color);
-
+//
 // let fullName: string = `Julie Kohl`;
 // let age: number = 37;
 // let sentence: string = `Hello, my name is ${fullName}. I'll be ${age + 1} years old next year.`;
@@ -41,35 +41,35 @@
 // Add
 // let a = 12
 // let b = 2
-// let c = a+b;
+// let c = a + b;
 // console.log(c)   //14
 
 // Sub
 // let a = 10
 // let b = 2
-// let c = a-b;
+// let c = a - b;
 // console.log(c)   //8
-
+//
 // let d = b-a;
 // console.log(d)   //-8
-
+//
 // let a = "1"
 // let b = "2"
-// console.log(a-b);  //-1
-//Compiler warning
+// console.log(a - b);  //-1
+// Compiler warning
 
 // let a = "Hello"
 // let b = 2
-// console.log(a-b);  //NaN
+// console.log(a - b);  //NaN
 
 // Multiplication
-// let a = 5
-// let b = 2
-// console.log(a*b);  //10
-//
+// let a: number = 5
+// let b: number = 2
+// console.log(a * b);  //10
+
 // let a = "5"
 // let b = "2"
-// console.log(a*b);  //10
+// console.log(a * b);  //10
 
 // Division
 // console.log(10 / 2);    //5
@@ -79,7 +79,6 @@
 // console.log('6' / '3');   //2
 
 // Exponentiation
-
 // console.log(3 ** 4);         // 81
 // console.log(10 ** -2);       // 0.01
 // console.log(2 ** 3 ** 2);    // 512
@@ -88,8 +87,8 @@
 
 //Boolean
 //Compiler warning
-// console.log(true-false)  //1  true is 1, false is 0
-// console.log(2-true)      //1
+// console.log(true - false)  //1  true is 1, false is 0
+// console.log(2 - true)      //1
 
 // Boolean - is for the two values true and false
 // True
@@ -100,12 +99,12 @@
 
 // let a = true     //boolean
 // let b = 2
-// let c = b+a;     //Typescript compiler throws a warning here
+// let c = b + a;     //Typescript compiler throws a warning here
 // console.log(c)   //3 because true is 1
 
 // let a = false     //boolean
 // let b = 2
-// let c = b+a;      //Compiler warning
+// let c = b + a;      //Compiler warning
 // console.log(c)    //2 because false is 0
 
 // console.log(6 / true);   //6 true is 1
@@ -129,7 +128,6 @@
 // obj = "hello"; // hello
 // const n: number = obj;
 // console.log(n); // { x: 0 }
-//
 
 // Project Calculator
 
