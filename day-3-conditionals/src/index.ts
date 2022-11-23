@@ -131,31 +131,60 @@
 // console.log(`You final bill is: ${bill}`);
 
 // logical Operators
-console.log("Welcome to the rollercoaster!");
-let height: number = 157;
+// console.log("Welcome to the rollercoaster!");
+// let height: number = 157;
+//
+// if (height >= 120) {
+//     console.log("You can ride the rollercoaster!");
+//     let age: number = 50;
+//     let bill: number = 0;
+//     let photo: number = 0;
+//
+//     if (age < 12) {
+//         bill = 5;
+//         photo = 3;
+//         console.log(`Child tickets are ${bill + photo}`);
+//     } else if (age <= 18) {
+//         bill = 7;
+//         photo = 3;
+//         console.log(`Youth tickets are ${bill + photo}`);
+//     } else if (age >= 45 && age <= 55) {
+//         console.log("Everything is going to be ok. Have a free ride on us!");
+//     } else {
+//         bill = 12;
+//         photo = 3;
+//         console.log(`Adult tickets are ${bill + photo}`);
+//     }
+// } else {
+//     console.log("Sorry, you have to grow taller before you can ride.");
+// }
 
-if (height >= 120) {
-    console.log("You can ride the rollercoaster!");
-    let age: number = 50;
-    let bill: number = 0;
-    let photo: number = 0;
+// Love Calculator Exercise
+console.log("Welcome to the Love Calculator!");
+let name1: string = "Juliana Kohl tv ";
+let name2: string = "Cesar Kohl";
 
-    if (age < 12) {
-        bill = 5;
-        photo = 3;
-        console.log(`Child tickets are ${bill + photo}`);
-    } else if (age <= 18) {
-        bill = 7;
-        photo = 3;
-        console.log(`Youth tickets are ${bill + photo}`);
-    } else if (age >= 45 && age <= 55) {
-        console.log("Everything is going to be ok. Have a free ride on us!");
-    } else {
-        bill = 12;
-        photo = 3;
-        console.log(`Adult tickets are ${bill + photo}`);
-    }
+let combinedNames: string = name1 + name2;
+let lowerNames = combinedNames.toLowerCase();
 
+let t: number = lowerNames.match(/t/g).length;
+let r: number = lowerNames.match(/r/g).length;
+let u: number = lowerNames.match(/u/g).length;
+let e: number = lowerNames.match(/e/g).length;
+let firstDigit: string = String(t + r + u + e);
+
+let l: number = lowerNames.match(/l/g).length;
+let o: number = lowerNames.match(/o/g).length;
+let v: number = lowerNames.match(/v/g).length;
+let secondE: number = lowerNames.match(/e/g).length;
+let secondDigit: string = String(l + o + v + secondE);
+
+let score: number = Number(firstDigit + secondDigit);
+
+if (score < 10 || score > 90){
+    console.log(`Your score is ${score}, you go together like coke and mentos.`);
+} else if (score >= 40 && score <= 50) {
+    console.log(`Your score is ${score}, you are alright together.`);
 } else {
-    console.log("Sorry, you have to grow taller before you can ride.");
+    console.log(`Your score is ${score}.`);
 }
