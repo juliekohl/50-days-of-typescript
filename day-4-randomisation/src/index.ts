@@ -34,11 +34,26 @@
 // console.log("new", statesOfAmerica); // add new array to the end
 
 // Exercise Banker Roulette
-let friendsNames: string = "Juliana, Angie, Kelly, Nathi, Gio";
-let splitNames: string[] = friendsNames.split(", ");
-let randomChoice: number = Math.floor(Math.random() * splitNames.length);
-// console.log("randomChoice to pay", randomChoice, splitNames[randomChoice]); // 4 Gio
-console.log(splitNames[randomChoice] + " is going to buy the meal today!");
+// let friendsNames: string = "Juliana, Angie, Kelly, Nathi, Gio";
+// let splitNames: string[] = friendsNames.split(", ");
+// let randomChoice: number = Math.floor(Math.random() * splitNames.length);
+// // console.log("randomChoice to pay", randomChoice, splitNames[randomChoice]); // 4 Gio
+// console.log(splitNames[randomChoice] + " is going to buy the meal today!");
 
 // let personPay: string = splitNames[randomChoice];
 // console.log(personPay + " is going to buy the meal today!"); // pick out random person
+
+// Index Errors and Nested Lists
+let fruits: string[] = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"];
+console.log("fruits[6]", fruits[6]); // Pears
+console.log("fruits[7]", fruits[7]); // undefined
+
+let len_fruits: number = fruits.length;
+console.log(len_fruits); // 7
+console.log("fruits[len_fruits]", fruits[len_fruits]); // undefined
+console.log("fruits[len_fruits - 1]", fruits[len_fruits - 1]); // Pears
+
+let vegetables: string[] = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"];
+let dirtyDozen: [string[], string[]] = [fruits, vegetables];
+
+console.log(dirtyDozen); // [[f], [v]]
