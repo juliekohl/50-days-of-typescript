@@ -69,6 +69,15 @@
 // console.log("range", range); // [1,4,7,10]
 
 // total
+// const range: number[] = [...Array(101).keys()];
+// let sum: number = 0;
+// for (let number in range) {
+//     console.log("number", range[number]);
+//     sum += range[number]
+// }
+// console.log("sum", sum); // 5050
+
+// OR
 // const start: number = 1;
 // const end: number = 100;
 // const range: number[] = [...Array(end - start + 1).keys()].map(x => x + start);
