@@ -19,11 +19,22 @@
 //     i--;
 // }
 
-const cars: string[] = ["BMW", "Volvo", "Saab", "Ford"];
-let car: number = 0;
-let text = " ";
+// const cars: string[] = ["BMW", "Volvo", "Saab", "Ford"];
+// let car: number = 0;
+// let text = " ";
+//
+// while (cars[car]) {
+//     text += cars[car];
+//     car++;
+// }
 
-while (cars[car]) {
-    text += cars[car];
-    car++;
+// While with if
+let sum: number = 0;
+
+while (true) {
+    let value: number = +prompt("Enter a number", '');
+    if (!value) break; // (*)
+    sum += value;
 }
+
+alert( 'Sum: ' + sum );
