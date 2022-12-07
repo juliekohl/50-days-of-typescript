@@ -3,10 +3,10 @@
 //     [index: string]: number | string;
 // }
 
-const programmingDictionary: object = {
-    bug: "An error in a program that prevents the program from running as expected.",
-    function: "A piece of code that you can easily call over and over again.",
-};
+// const programmingDictionary: object = {
+//     bug: "An error in a program that prevents the program from running as expected.",
+//     function: "A piece of code that you can easily call over and over again.",
+// };
 // console.log(programmingDictionary); // return all object
 
 // Retrieve item
@@ -31,7 +31,7 @@ const programmingDictionary: object = {
 // let key = 'bug';
 // console.log(key in programmingDictionary); // true
 //
-// for (let key in programmingDictionary){
+// for (let key in programmingDictionary) {
 //     console.log(1, key); // key
 //     console.log(2, programmingDictionary[key]); // value
 // }
@@ -72,34 +72,67 @@ const programmingDictionary: object = {
 //     france: "Paris",
 //     germany: "Berlin",
 // };
-// console.log(capitals["france"]) // Paris return value
+// console.log(capitals["france"]); // Paris return value
 
 // Nesting a List in a Dictionary
 // let travelLog: object = {
 //     france: ["Paris", "Lille", "Dijon"],
 //     germany: ["Berlin", "Hamburg", "Stuttgart"],
 // };
-// console.log(travelLog["germany"]) // germany return value ["Berlin","Hamburg","Stuttgart"]
+// console.log(travelLog["germany"]); // germany return value ["Berlin","Hamburg","Stuttgart"]
 
 // Nesting Dictionary in a Dictionary
 // let travelLog: object = {
 //     france: {"citiesVisited": ["Paris", "Lille", "Dijon"], "totalVisits": 12},
 //     germany: {"citiesVisited": ["Berlin", "Hamburg", "Stuttgart"], "totalVisits": 5},
 // };
-// console.log(travelLog["france"]) // france return value
+// console.log(travelLog["france"]); // france return value
 
 // Nesting Dictionaries in Lists
-let travelLog: [{}, {}] = [
+// let travelLog: [{}, {}] = [
+//     {
+//         country: "France",
+//         citiesVisited: ["Paris", "Lille", "Dijon"],
+//         totalVisits: 12,
+//     },
+//     {
+//         country: "Germany",
+//         citiesVisited: ["Berlin", "Hamburg", "Stuttgart"],
+//         totalVisits: 5,
+//     },
+// ];
+// console.log(1, travelLog[0]); // France return value
+// console.log(2, travelLog[0]["citiesVisited"]); // citiesVisited return value ["Paris","Lille","Dijon"]
+
+// Exercise Dictionary in List
+interface TravelLocation {
+    country: string;
+    visits: number;
+    cities: string[];
+}
+
+let travelLog: TravelLocation[] = [
     {
         country: "France",
-        citiesVisited: ["Paris", "Lille", "Dijon"],
-        totalVisits: 12,
+        visits: 12,
+        cities: ["Paris", "Lille", "Dijon", "Nice"],
     },
     {
         country: "Germany",
-        citiesVisited: ["Berlin", "Hamburg", "Stuttgart"],
-        totalVisits: 5,
+        visits: 5,
+        cities: ["Berlin", "Hamburg", "Stuttgart", "Munich"],
     },
 ];
-console.log(1, travelLog[0]) // France return value
-console.log(2, travelLog[0]["citiesVisited"]) // citiesVisited return value ["Paris","Lille","Dijon"]
+
+function addNewCountry( name: string, visitCount: number, citiesVisited: string[] ): void {
+    let newCountry: TravelLocation = {
+        country: name,
+        visits: visitCount,
+        cities: citiesVisited,
+    };
+
+    travelLog.push(newCountry);
+}
+
+addNewCountry("Poland", 3, ["Warsaw", "kraków"]);
+console.log(travelLog);
