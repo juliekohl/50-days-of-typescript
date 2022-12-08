@@ -57,22 +57,19 @@
 
 // Quiz
 // 1
-// let n1: number = 0;
-// let n2: number = 0;
-//
-// function add(n1, n2): number {
+// function add(n1: number, n2: number): number {
 //     return n1 + n2;
 // }
 //
-// function subtract(n1, n2): number {
+// function subtract(n1: number, n2: number): number {
 //     return n1 - n2;
 // }
 //
-// function multiply(n1, n2): number {
+// function multiply(n1: number, n2: number): number {
 //     return n1 * n2;
 // }
 //
-// function divide(n1, n2): number {
+// function divide(n1: number, n2: number): number {
 //     return n1 / n2;
 // }
 //
