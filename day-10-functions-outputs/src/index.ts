@@ -99,3 +99,43 @@
 // }
 //
 // myFunction(25); // Terrible
+
+// Project calculator
+function add(n1: number, n2: number): number {
+    return n1 + n2;
+}
+
+function subtract(n1: number, n2: number): number {
+    return n1 - n2;
+}
+
+function multiply(n1: number, n2: number): number {
+    return n1 * n2;
+}
+
+function divide(n1: number, n2: number): number {
+    return n1 / n2;
+}
+
+let operations = {
+    add: "+",
+    subtract: "-",
+    multiply: "*",
+    divide: "/",
+};
+
+function calculator(): void {
+    // for (let symbol in operations) {
+    //   console.log("symbol", operations[symbol]);
+    //   return operations[symbol];
+    // }
+
+    let n1: number = 5;
+    let n2: number = 5;
+    let operation = multiply(n1, n2);
+    let operationSymbol = "*";
+
+    console.log(`${n1} ${operationSymbol} ${n2} = ${operation}`);
+}
+
+calculator();
