@@ -34,17 +34,35 @@
 // console.log(playerHealth); // 10
 
 // There is no Block Scope
-let gameLevel: number = 3;
+// let gameLevel: number = 3;
+//
+// function createEnemy(): void {
+//     let enemies: string[] = ["Skeleton", "Zombie", "Alien"];
+//     if (gameLevel < 5 ) {
+//         let newEnemy: string = enemies[0];
+//         console.log("newEnemy", newEnemy); // skeleton
+//     }
+//
+//     // console.log("newEnemy2", newEnemy); // error var is not defined
+//
+// }
+//
+// createEnemy();
 
-function createEnemy(): void {
-    let enemies: string[] = ["Skeleton", "Zombie", "Alien"];
-    if (gameLevel < 5 ) {
-        let newEnemy: string = enemies[0];
-        console.log("newEnemy", newEnemy); // skeleton
-    }
+// Modify a Global Variable
+let enemies: number = 1;
 
-    // console.log("newEnemy2", newEnemy); // error var is not defined
-
+function increaseEnemies(): number {
+    console.log(`enemies inside function: ${enemies}`); // 1
+    return enemies ++;
 }
 
-createEnemy();
+console.log(`enemies outside function: ${enemies}`); // 2
+
+increaseEnemies();
+console.log(`enemies outside function: ${enemies}`); // 2
+
+// Constants & Global Scope
+const pi: number = 3.14159;
+let url: string = "https://www.google.com";
+const twitter: string = "@JCochenski";
