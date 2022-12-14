@@ -96,3 +96,4 @@ for (let number in range) {
         console.log(range[number]);
     }
 }
+
