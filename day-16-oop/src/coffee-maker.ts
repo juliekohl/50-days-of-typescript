@@ -1,13 +1,11 @@
-interface Resources {
-    water: number,
-    milk: number,
-    coffee: number,
-};
+import {Ingredients} from "./interfaces/ingredients.interface";
 
-class CoffeeMaker {
-    resources: Resources;
+export class CoffeeMaker {
+    resources: Ingredients;
+    orderName: string;
 
-    constructor() {
+    constructor(orderName: string = "",) {
+        this.orderName = orderName;
         this.resources = {
             water: 500,
             milk: 200,
@@ -21,28 +19,23 @@ class CoffeeMaker {
         console.log(`Coffee: ${this.resources["coffee"]}g`);
     }
 
-    public isResourceSufficient(ingredients: Partial<Resources> ): boolean {
+    public isResourceSufficient(ingredients: Ingredients) {
         let canMake: boolean = true;
 
         for (let item in this.resources) {
+
             if (ingredients[item] > this.resources[item]) {
                 console.log(`Sorry there is not enough ${item}.`);
                 canMake = false;
             }
         }
         return canMake;
-
     }
 
-    public makeCoffee(ingredients: Partial<Resources>, orderName: string = "espresso" ): void {
+    public makeCoffee(ingredients: Ingredients, orderName = "latte" ): void {
         for (let item in this.resources) {
             this.resources[item] -= ingredients[item];
         }
         console.log(`Here is your ${orderName} ☕️. Enjoy!`);
     }
 }
-
-// const test = new CoffeeMaker();
-// console.log("report:", test.report());
-// console.log("isResourceSufficient:", test.isResourceSufficient({water: 600}));
-// console.log("isResourceSufficient:", test.makeCoffee({water: 200}));

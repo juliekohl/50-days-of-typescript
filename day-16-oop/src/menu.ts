@@ -1,11 +1,9 @@
-class MenuItem {
+import {Ingredients} from "./interfaces/ingredients.interface";
+
+export class MenuItem {
     name: string = "";
     cost: number = 0;
-    ingredients: {
-        water: number,
-        milk: number,
-        coffee: number,
-    } = {
+    ingredients: Ingredients = {
         water: 0,
         milk: 0,
         coffee: 0,
@@ -22,7 +20,7 @@ class MenuItem {
     }
 }
 
-class Menu {
+export class Menu {
     menu: [MenuItem, MenuItem, MenuItem] = [
         new MenuItem(),
         new MenuItem(),
@@ -61,11 +59,10 @@ class Menu {
         for (let item in this.menu) {
             options += `${this.menu[item].name}/`;
         }
-
         return options;
     }
 
-    public findDrink(orderName: string = ""): string {
+    public findDrink(orderName: string): string {
         for (let item in this.menu) {
             if (this.menu[item].name === orderName) {
                 return this.menu[item].name;
@@ -73,9 +70,4 @@ class Menu {
         }
         return "Sorry that item is not available."
     }
-
 }
-
-// const test = new Menu();
-// console.log("test", test.getItems());
-// console.log("test", test.findDrink());
